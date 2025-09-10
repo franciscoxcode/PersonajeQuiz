@@ -81,6 +81,9 @@
                     <connections>
                         <outlet property="progressLabel" destination="8an-Iv-uaI" id="9l7-r0-HBL"/>
                         <outlet property="questionLabel" destination="wIP-XK-bK8" id="JCT-R4-nUj"/>
+                        <outletCollection property="optionButtons" destination="uTl-L0-N2N" collectionClass="NSMutableArray" id="dqm-ZK-OzN"/>
+                        <outletCollection property="optionButtons" destination="Drj-3o-J2C" collectionClass="NSMutableArray" id="8c7-w5-x7M"/>
+                        <outletCollection property="optionButtons" destination="7S2-dt-LQY" collectionClass="NSMutableArray" id="pTl-fA-LWN"/>
                         <segue destination="WAZ-CY-MPr" kind="show" identifier="showResult" id="gFX-sJ-ZgV"/>
                     </connections>
                 </viewController>
