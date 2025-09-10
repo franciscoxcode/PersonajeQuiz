@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,41 +17,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pregunta 1/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8an-Iv-uaI">
-                                <rect key="frame" x="148.66666666666666" y="154" width="95.666666666666657" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pregunta 1/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8an-Iv-uaI">
+                                <rect key="frame" x="148.66666666666666" y="182" width="95.666666666666657" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Qué personaje de caricatura prefieres?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIP-XK-bK8">
-                                <rect key="frame" x="45" y="216" width="303" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Qué personaje de caricatura prefieres?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIP-XK-bK8">
+                                <rect key="frame" x="45" y="252.33333333333334" width="303" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="MuK-zZ-ZIo">
-                                <rect key="frame" x="137.33333333333334" y="293" width="118.66666666666666" height="145"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="MuK-zZ-ZIo">
+                                <rect key="frame" x="146.66666666666666" y="312.66666666666669" width="100" height="144"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTl-L0-N2N">
-                                        <rect key="frame" x="0.0" y="0.0" width="118.66666666666667" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Respuesta 1"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTl-L0-N2N">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Respuesta 1">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="optionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4eb-lm-Q43"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-3o-J2C">
-                                        <rect key="frame" x="0.0" y="55.333333333333329" width="118.66666666666667" height="34.333333333333329"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Respuesta 2"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-3o-J2C">
+                                        <rect key="frame" x="0.0" y="55" width="100" height="34"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Respuesta 2">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="optionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ScV-Hj-5ka"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-dt-LQY">
-                                        <rect key="frame" x="0.0" y="110.66666666666667" width="118.66666666666667" height="34.333333333333329"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Respuesta 3"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-dt-LQY">
+                                        <rect key="frame" x="0.0" y="110" width="100" height="34"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Respuesta 3">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="optionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMY-A3-Keh"/>
                                         </connections>
@@ -61,9 +68,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MuK-zZ-ZIo" firstAttribute="top" secondItem="wIP-XK-bK8" secondAttribute="bottom" constant="40" id="IM5-0s-vEQ"/>
                             <constraint firstItem="MuK-zZ-ZIo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JeV-e0-ZbN"/>
                             <constraint firstItem="wIP-XK-bK8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JuH-lD-Qry"/>
                             <constraint firstItem="8an-Iv-uaI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cTg-cT-3z9"/>
+                            <constraint firstItem="8an-Iv-uaI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="m38-Gz-PzD"/>
+                            <constraint firstItem="wIP-XK-bK8" firstAttribute="top" secondItem="8an-Iv-uaI" secondAttribute="bottom" constant="50" id="sjh-uX-5aa"/>
                             <constraint firstItem="wIP-XK-bK8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uAp-dI-mxD"/>
                         </constraints>
                     </view>
@@ -114,6 +124,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

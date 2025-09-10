@@ -13,6 +13,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBAction func optionTapped(_ sender: UIButton) {
+        print("Opción seleccionada: \(sender.title(for: .normal) ?? "Sin título")")
     }
     
     override func viewDidLoad() {
