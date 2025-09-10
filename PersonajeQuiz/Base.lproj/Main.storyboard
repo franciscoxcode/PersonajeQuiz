@@ -19,6 +19,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="JeY-Xd-aLf"/>
+                    <connections>
+                        <segue destination="WAZ-CY-MPr" kind="show" identifier="showResult" id="gFX-sJ-ZgV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,10 +37,11 @@
                         <viewLayoutGuide key="safeArea" id="C4B-Bc-OPm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TaE-pS-gVw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxj-RJ-ZLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="5"/>
+            <point key="canvasLocation" x="1850" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1fX-U7-8YR">
