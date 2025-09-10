@@ -15,16 +15,29 @@ class QuizViewController: UIViewController {
     @IBOutlet var optionButtons: [UIButton]!
     
     @IBAction func optionTapped(_ sender: UIButton) {
-        print("Opción seleccionada: \(sender.title(for: .normal) ?? "Sin título")")
-        
-        currentQuestionIndex += 1
-        
-        if currentQuestionIndex < questions.count {
-            showQuestion()
-        } else {
-            print("Quiz terminado: aquí vamos a mostrar el resultado")
-            // Aquí luego haremos el segue a ResultViewController
-        }
+        guard let index = optionButtons.firstIndex(of: sender) else { return }
+            
+            let currentQuestion = questions[currentQuestionIndex]
+            let characterIndex = currentQuestion.characterMapping[index]
+            scores[characterIndex] += 1
+            
+            print("Opción seleccionada: \(sender.title(for: .normal) ?? "") → +1 para \(characters[characterIndex])")
+            
+            currentQuestionIndex += 1
+            
+            if currentQuestionIndex < questions.count {
+                showQuestion()
+            } else {
+                print("Quiz terminado. Puntajes: \(scores)")
+                
+                if let maxScore = scores.max(),
+                   let winnerIndex = scores.firstIndex(of: maxScore) {
+                    let winner = characters[winnerIndex]
+                    print("Ganador: \(winner)")
+                    
+                    performSegue(withIdentifier: "showResult", sender: winner)
+                }
+            }
     }
     
     struct Question {
@@ -72,6 +85,7 @@ class QuizViewController: UIViewController {
         ]
         
         showQuestion()
+        
     }
     
     func showQuestion() {
@@ -91,6 +105,14 @@ class QuizViewController: UIViewController {
             } else {
                 button.isHidden = true
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResult",
+           let resultVC = segue.destination as? ResultViewController,
+           let winner = sender as? String {
+            resultVC.winner = winner
         }
     }
     

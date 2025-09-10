@@ -9,10 +9,15 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    var winner: String?
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "Resultado"
+        print("Resultado recibido: \(winner ?? "Ninguno")")
     }
     
 
