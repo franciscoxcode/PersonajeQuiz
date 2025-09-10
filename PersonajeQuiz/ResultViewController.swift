@@ -12,6 +12,10 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBAction func retryTapped(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     var winner: String?
     var winnerDescription: String?
     
@@ -20,7 +24,7 @@ class ResultViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         title = "Resultado"
-        
+        navigationItem.hidesBackButton = true
         winnerLabel.text = "Tu personaje es: \(winner ?? "Nadie")"
         descriptionLabel.text = winnerDescription ?? ""
     }

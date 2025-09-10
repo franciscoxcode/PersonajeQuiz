@@ -111,16 +111,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyD-Rl-VM7">
+                                <rect key="frame" x="32" y="392.66666666666669" width="329" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reintentar"/>
+                                <connections>
+                                    <action selector="retryTapped:" destination="WAZ-CY-MPr" eventType="touchUpInside" id="4dA-b5-tqY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C4B-Bc-OPm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="C4B-Bc-OPm" firstAttribute="trailing" secondItem="IKf-d5-RaS" secondAttribute="trailing" constant="20" id="Cru-VI-cwx"/>
+                            <constraint firstItem="GyD-Rl-VM7" firstAttribute="top" secondItem="IKf-d5-RaS" secondAttribute="bottom" constant="50" id="Ep7-tK-eAp"/>
+                            <constraint firstItem="GyD-Rl-VM7" firstAttribute="centerX" secondItem="ORZ-6a-CbX" secondAttribute="centerX" id="Gb3-mC-5AZ"/>
                             <constraint firstItem="IKf-d5-RaS" firstAttribute="leading" secondItem="C4B-Bc-OPm" secondAttribute="leading" constant="40" id="GsX-ss-Z3k"/>
                             <constraint firstItem="abj-SR-VgR" firstAttribute="top" secondItem="C4B-Bc-OPm" secondAttribute="top" constant="120" id="Iad-EH-b6C"/>
+                            <constraint firstItem="GyD-Rl-VM7" firstAttribute="leading" secondItem="C4B-Bc-OPm" secondAttribute="leading" constant="32" id="biP-al-qzl"/>
                             <constraint firstItem="C4B-Bc-OPm" firstAttribute="trailing" secondItem="IKf-d5-RaS" secondAttribute="trailing" constant="40" id="h4b-TS-dja"/>
                             <constraint firstItem="abj-SR-VgR" firstAttribute="top" secondItem="C4B-Bc-OPm" secondAttribute="top" constant="120" id="hls-c3-QJV"/>
                             <constraint firstItem="abj-SR-VgR" firstAttribute="centerX" secondItem="ORZ-6a-CbX" secondAttribute="centerX" id="lJV-zz-P9c"/>
+                            <constraint firstItem="C4B-Bc-OPm" firstAttribute="trailing" secondItem="GyD-Rl-VM7" secondAttribute="trailing" constant="32" id="ok3-OO-KzE"/>
                             <constraint firstItem="IKf-d5-RaS" firstAttribute="centerX" secondItem="ORZ-6a-CbX" secondAttribute="centerX" id="ppS-xs-Qkc"/>
                             <constraint firstItem="IKf-d5-RaS" firstAttribute="leading" secondItem="C4B-Bc-OPm" secondAttribute="leading" constant="20" id="tgL-wP-Asw"/>
                             <constraint firstItem="IKf-d5-RaS" firstAttribute="top" secondItem="abj-SR-VgR" secondAttribute="bottom" constant="20" id="tsc-ww-o8d"/>

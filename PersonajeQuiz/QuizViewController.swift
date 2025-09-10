@@ -123,6 +123,12 @@ class QuizViewController: UIViewController {
             }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        currentQuestionIndex = 0
+        scores = [0, 0, 0]
+        showQuestion()
+    }
 
     /*
     // MARK: - Navigation
