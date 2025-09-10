@@ -16,6 +16,15 @@ class QuizViewController: UIViewController {
     
     @IBAction func optionTapped(_ sender: UIButton) {
         print("Opción seleccionada: \(sender.title(for: .normal) ?? "Sin título")")
+        
+        currentQuestionIndex += 1
+        
+        if currentQuestionIndex < questions.count {
+            showQuestion()
+        } else {
+            print("Quiz terminado: aquí vamos a mostrar el resultado")
+            // Aquí luego haremos el segue a ResultViewController
+        }
     }
     
     struct Question {
