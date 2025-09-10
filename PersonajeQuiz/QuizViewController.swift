@@ -8,7 +8,13 @@
 import UIKit
 
 class QuizViewController: UIViewController {
-
+    
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    @IBAction func optionTapped(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

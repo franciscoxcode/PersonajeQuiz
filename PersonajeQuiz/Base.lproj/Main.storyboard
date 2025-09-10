@@ -15,11 +15,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pregunta 1/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8an-Iv-uaI">
+                                <rect key="frame" x="148.66666666666666" y="154" width="95.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Qué personaje de caricatura prefieres?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIP-XK-bK8">
+                                <rect key="frame" x="45" y="216" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="MuK-zZ-ZIo">
+                                <rect key="frame" x="137.33333333333334" y="293" width="118.66666666666666" height="145"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTl-L0-N2N">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.66666666666667" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Respuesta 1"/>
+                                        <connections>
+                                            <action selector="optionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4eb-lm-Q43"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drj-3o-J2C">
+                                        <rect key="frame" x="0.0" y="55.333333333333329" width="118.66666666666667" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Respuesta 2"/>
+                                        <connections>
+                                            <action selector="optionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ScV-Hj-5ka"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-dt-LQY">
+                                        <rect key="frame" x="0.0" y="110.66666666666667" width="118.66666666666667" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Respuesta 3"/>
+                                        <connections>
+                                            <action selector="optionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMY-A3-Keh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MuK-zZ-ZIo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JeV-e0-ZbN"/>
+                            <constraint firstItem="wIP-XK-bK8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JuH-lD-Qry"/>
+                            <constraint firstItem="8an-Iv-uaI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cTg-cT-3z9"/>
+                            <constraint firstItem="wIP-XK-bK8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uAp-dI-mxD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JeY-Xd-aLf"/>
                     <connections>
+                        <outlet property="progressLabel" destination="8an-Iv-uaI" id="9l7-r0-HBL"/>
+                        <outlet property="questionLabel" destination="wIP-XK-bK8" id="JCT-R4-nUj"/>
                         <segue destination="WAZ-CY-MPr" kind="show" identifier="showResult" id="gFX-sJ-ZgV"/>
                     </connections>
                 </viewController>
