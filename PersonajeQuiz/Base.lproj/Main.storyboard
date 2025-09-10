@@ -98,14 +98,43 @@
                     <view key="view" contentMode="scaleToFill" id="ORZ-6a-CbX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ganador aquí" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abj-SR-VgR">
+                                <rect key="frame" x="145.66666666666666" y="282" width="102" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción del personaje ganador" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKf-d5-RaS">
+                                <rect key="frame" x="40" y="322.33333333333331" width="313" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C4B-Bc-OPm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C4B-Bc-OPm" firstAttribute="trailing" secondItem="IKf-d5-RaS" secondAttribute="trailing" constant="20" id="Cru-VI-cwx"/>
+                            <constraint firstItem="IKf-d5-RaS" firstAttribute="leading" secondItem="C4B-Bc-OPm" secondAttribute="leading" constant="40" id="GsX-ss-Z3k"/>
+                            <constraint firstItem="abj-SR-VgR" firstAttribute="top" secondItem="C4B-Bc-OPm" secondAttribute="top" constant="120" id="Iad-EH-b6C"/>
+                            <constraint firstItem="C4B-Bc-OPm" firstAttribute="trailing" secondItem="IKf-d5-RaS" secondAttribute="trailing" constant="40" id="h4b-TS-dja"/>
+                            <constraint firstItem="abj-SR-VgR" firstAttribute="top" secondItem="C4B-Bc-OPm" secondAttribute="top" constant="120" id="hls-c3-QJV"/>
+                            <constraint firstItem="abj-SR-VgR" firstAttribute="centerX" secondItem="ORZ-6a-CbX" secondAttribute="centerX" id="lJV-zz-P9c"/>
+                            <constraint firstItem="IKf-d5-RaS" firstAttribute="centerX" secondItem="ORZ-6a-CbX" secondAttribute="centerX" id="ppS-xs-Qkc"/>
+                            <constraint firstItem="IKf-d5-RaS" firstAttribute="leading" secondItem="C4B-Bc-OPm" secondAttribute="leading" constant="20" id="tgL-wP-Asw"/>
+                            <constraint firstItem="IKf-d5-RaS" firstAttribute="top" secondItem="abj-SR-VgR" secondAttribute="bottom" constant="20" id="tsc-ww-o8d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TaE-pS-gVw"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="IKf-d5-RaS" id="POE-P4-oiS"/>
+                        <outlet property="winnerLabel" destination="abj-SR-VgR" id="rKl-gr-uGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxj-RJ-ZLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850" y="5"/>
+            <point key="canvasLocation" x="1849.6183206106869" y="4.9295774647887329"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1fX-U7-8YR">

@@ -9,15 +9,20 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     var winner: String?
+    var winnerDescription: String?
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         title = "Resultado"
-        print("Resultado recibido: \(winner ?? "Ninguno")")
+        
+        winnerLabel.text = "Tu personaje es: \(winner ?? "Nadie")"
+        descriptionLabel.text = winnerDescription ?? ""
     }
     
 

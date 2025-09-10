@@ -47,6 +47,11 @@ class QuizViewController: UIViewController {
     }
 
     let characters = ["Bart", "Pocahontas", "Mario"]
+    let descriptions = [
+        "Eres travieso, irreverente y siempre te estás metiendo en problemas.",
+        "Eres amante de la naturaleza y espiritual. Tienes mucha sabiduría y estás en conexión con la naturaleza.",
+        "Eres valiente y alegre. Te gusta lucha por causas nobles y salvar a personas en problemas."
+    ]
 
     var questions: [Question] = []
     var currentQuestionIndex = 0
@@ -110,10 +115,12 @@ class QuizViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult",
-           let resultVC = segue.destination as? ResultViewController,
-           let winner = sender as? String {
-            resultVC.winner = winner
-        }
+               let resultVC = segue.destination as? ResultViewController,
+               let winner = sender as? String,
+               let winnerIndex = characters.firstIndex(of: winner) {
+                resultVC.winner = winner
+                resultVC.winnerDescription = descriptions[winnerIndex]
+            }
     }
     
 
